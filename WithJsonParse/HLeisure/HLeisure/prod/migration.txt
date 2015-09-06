@@ -1,0 +1,10 @@
+﻿List<Products> products = new List<Products>{
+                new Products { name="Tea Bag", sale_amount=5},
+                new Products { name="Ink", sale_amount=3},
+                new Products { name="Diaries", sale_amount=2},
+                new Products { name="Hot Chocolate Packets", sale_amount=5},
+				new Products {name="Lays",sale_amount=2},
+				new Products {name="Chitos",sale_amount=1.5}
+            };
+            products.ForEach(p => context.products.AddOrUpdate(pName => pName.name, p));
+            context.SaveChanges();

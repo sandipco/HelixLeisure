@@ -1,0 +1,45 @@
+﻿<Window x:Class="HLeisureClient.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="170" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Label Name="lblUserName" Content="User Name" Grid.Row="0" Grid.Column="0"/>
+        <Label Name="lblPassword" Content="Password" Grid.Row="1" Grid.Column="0"/>
+        <TextBox Name="txtUserName" Grid.Row="0" Grid.Column="1" Height="25" Width="200"/>
+        <PasswordBox Name="txtPassword" Grid.Row="1" Grid.Column="1" Height="25" Width="200"/>
+        <StackPanel Orientation="Horizontal"
+                        Grid.Row="2"
+                        Grid.RowSpan="2"
+                        Grid.ColumnSpan="2"
+                        Grid.Column="1"
+
+                        HorizontalAlignment="Center">
+            <Button Click="OnLogin"
+                        Content="Login"
+                        Height="20"
+                        Width="75"
+                        Margin="5"
+                        VerticalAlignment="Top" />
+            <Button Click="OnCancel"
+                        Height="20"
+                        Content="Cancel"
+                        Width="75"
+                        Margin="5"
+                        VerticalAlignment="Top" />
+            
+        </StackPanel>
+
+    </Grid>
+</Window>
